@@ -1,10 +1,10 @@
-# a (`@parcel/packager-html: Asset has no content`)
+## `@parcel/packager-html: Asset has no content`
 
 `(rm -rf .parcel-cache && parcel2 build a/index.html || parcel2 build a/index.html) | cat`
 
-Revert https://github.com/parcel-bundler/parcel/commit/0cd78e2be54ddb24d6048b88c179b3ad4dd272f8
+Revert https://github.com/parcel-bundler/parcel/commit/0cd78e2be54ddb24d6048b88c179b3ad4dd272f8 because adding an invalidation on `options.hot` in the HTML transformer somehow fixes the problem.
 
-# b (`@parcel/packager-js: Asset has no content`)
+## `@parcel/packager-js: Asset has no content`
 
 0. `rm -rf .parcel-cache`
 1. `parcel b/index.html`
